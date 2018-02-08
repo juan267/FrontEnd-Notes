@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo app</title>
+
+  <style>
+    .done {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body ng-app="app" ng-controller="TodoController">
+
+  <ul>
+    <li ng-repeat="item in items" ng-class="{ done: item.done }" ng-click="toggleDone(item)">{{ item.title }}</li>
+  </ul>
+  <button ng-click="add()">Agregar</button>
+  <button ng-click="login()" ng-show="!authenticated">Login</button>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCU_4ykjuIvZYws30TsoNZ16qrqoe9Xids",
+      authDomain: "todo-german.firebaseapp.com",
+      databaseURL: "https://todo-german.firebaseio.com",
+      storageBucket: "todo-german.appspot.com",
+      messagingSenderId: "100330674450"
+    };
+    firebase.initializeApp(config);
+
+    var app = angular.module("app", ["firebase"]);
+    app.controller("TodoController", ['$scope', '$firebaseArray', '$firebaseAuth', function($scope, $firebaseArray, $firebaseAuth) {
+      var auth = $firebaseAuth();
+      var database = firebase.database().ref('items');
+
+      $scope.authenticated = false;
+      auth.$onAuthStateChanged(function(firebaseUser) {
+        if (firebaseUser) {
+          $scope.authenticated = true;
+        }
+      });
+
+      $scope.items = $firebaseArray(database);
+
+      $scope.add = function() {
+        $scope.items.$add({
+          title: "Prueba",
+          done: true
+        })
+      };
+
+      $scope.toggleDone = function(item) {
+        item.done = !item.done;
+        $scope.items.$save(item);
+      };
+
+      $scope.login = function() {
+        auth.$signInWithPopup("github").then(function(firebaseUser) {
+          console.log("Signed in as:", firebaseUser.uid);
+        }).catch(function(error) {
+          console.log("Authentication failed:", error);
+        });
+      }
+    }]);
+  </script>
+</body>
+</html>

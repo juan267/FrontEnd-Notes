@@ -1,0 +1,8 @@
+<ul>
+  {{#each students}}
+    <li>
+      Nombre: {{name}}, Edad: {{age}}
+      <a href="/students/{{_id}}/edit">Editar</a>
+    </li>
+  {{/each}}
+</ul>

@@ -1,0 +1,25 @@
+{
+  "name": "students-express",
+  "version": "0.0.1",
+  "private": false,
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/juan267/express.git"
+  },
+  "bugs": {
+    "url": "https://github.com/juan267/express/issues"
+  },
+  "homepage": "https://github.com/juan267/express",
+  "keywords": [],
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "mongodb": "^2.2.10"
+  }
+}

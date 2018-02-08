@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .container {
+    /*align-items: flex-end;*/
+    display: flex;
+    /*flex-direction: row-reverse;*/
+    /*justify-content: /*center*/
+    border: 10px solid goldenrod;
+    min-height: 100vh;
+    flex-wrap: wrap;
+  }
+  .box {
+    flex: 1;
+    height: 200px;
+    /*flex-basis: 200px;*/
+    /*flex: 1;*/
+    font-size: 100px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .box-1 {
+    background-color: olive;
+  }
+  .box-2 {
+    background-color: rebeccapurple;
+  }
+  .box-3 {
+    background-color: tomato;
+  }
+  .box-4 {
+    background-color: skyblue;
+  }
+  .box-5 {
+    background-color: peru;
+  }
+  .box-6 {
+    background-color: mediumaquamarine;
+  }
+  .box-7 {
+    background-color: cornsilk;
+  }
+  .box-8 {background: #F53B5B;}
+  .box-9 {
+    /*flex: 2;*/
+    background: #F5F027;
+  }
+  .box-10 {background: #4579F5;}
+
+</style>
+<body>
+  <div class="container">
+    <div class="box box-1">1</div>
+    <div class="box box-2">2</div>
+    <div class="box box-3">3</div>
+    <div class="box box-4">4</div>
+    <div class="box box-5">5</div>
+    <div class="box box-6">6</div>
+    <div class="box box-7">7</div>
+    <div class="box box-8">8</div>
+    <div class="box box-9">9</div>
+    <div class="box box-10">10</div>
+  </div>
+</body>
+</html>

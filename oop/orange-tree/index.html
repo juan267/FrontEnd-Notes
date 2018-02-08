@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>Orange Jasmine Challenge</title>
+
+        <meta name="description" content="Dev Bootcamp's Orange Jasmine Challenge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="stylesheets/normalize.min.css">
+        <link rel="stylesheet" href="stylesheets/main.css">
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header>
+            Welcome to Orange Trees!
+        </header>
+
+        <div class="grove">
+            <button class="plant">Plant Orange Tree</button>
+            <button class="age">Age Orange Tree</button>
+
+        </div>
+
+        <div id="orange-tree-template">
+            <div class="orange-tree">
+                <h2>Tree Name</h2>
+                <p class="age">0</p>
+                <p class="fruit-count">0</p>
+                <button class="pick">Pick!</button>
+                <button class="age">Age!</button>
+                <div class="display-tree-big"></div>
+            </div>
+        </div>
+
+        <!-- remember: we put scripts at the bottom of the body so they're loaded
+            AFTER the DOM is loaded -->
+        <script src="javascripts/vendor/jquery-1.11.1.js"></script>
+        <script src="javascripts/tree.js"></script>
+        <script src="javascripts/view.js"></script>
+        <script src="javascripts/controller.js"></script>
+    </body>
+</html>

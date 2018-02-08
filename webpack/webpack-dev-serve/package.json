@@ -1,0 +1,24 @@
+{
+  "name": "no",
+  "version": "0.0.1",
+  "private": false,
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/juan267/an%CC%83adiendo-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/juan267/añadiendo-css/issues"
+  },
+  "homepage": "https://github.com/juan267/añadiendo-css",
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "css-loader": "^0.25.0",
+    "style-loader": "^0.13.1"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  }
+}

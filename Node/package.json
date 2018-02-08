@@ -1,0 +1,19 @@
+{
+  "name": "Node",
+  "version": "0.0.1",
+  "private": false,
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/juan267/Node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/juan267/Node/issues"
+  },
+  "homepage": "https://github.com/juan267/Node",
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "mongodb": "^2.2.10"
+  }
+}

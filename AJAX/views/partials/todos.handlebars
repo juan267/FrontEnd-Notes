@@ -1,0 +1,8 @@
+<ul id='todo-list'>
+  {{#each todos}}
+    <li>
+      {{todoItem}}
+      <a id='delete-todo' href="/todos/{{@index}}/delete">Borrar</a>
+    </li>
+  {{/each}}
+</ul>

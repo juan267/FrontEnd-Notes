@@ -1,0 +1,27 @@
+<h1>Hola mundo</h1>
+
+{{> todos }}
+
+<form id='create-todo' action="/todos" method='post'>
+  <input type="text" name="todoItem">
+  <input type="submit" value="Crear Todo">
+</form>
+
+
+
+{{!-- <h1>Todos</h1> --}}
+
+{{!-- Movemos este codigo un partial --}}
+{{!-- <ul id='todo-list'>
+  {{#each todos}}
+    <li>{{todoItem}}</li>
+  {{/each}}
+</ul> --}}
+
+ {{!-- {{> todos}} --}}
+{{!--
+<form id='create-todo' action="/todos" method='post'>
+  <input type="text" name="todoItem">
+  <input type="submit" value="Create Todo">
+</form>
+ --}}

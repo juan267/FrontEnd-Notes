@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Links</title>
+</head>
+<body ng-app='app' ng-controller="LinksController as links">
+  <h1>App de links</h1>
+  <button ng-click='login()'>Login</button>
+  <p ng-show='authenticated'>{{user.displayName}}</p>
+  <ul ng-repeat='link in links'>
+    <div>
+      <p>{{link.title}}</p>
+      <button ng-click='deleteLink(link)'>Borrar</button>
+    </div>
+  </ul>
+  <form ng-submit='addLink(link)'>
+    <input type="text" ng-model='link.title'>
+    <input type="text" ng-model='link.url'>
+    <input type="submit">
+  </form>
+
+  <!-- AngularJS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+  <script src='app.js'></script>
+</body>
+</html>

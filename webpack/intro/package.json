@@ -1,0 +1,20 @@
+{
+  "name": "intro",
+  "version": "0.0.1",
+  "private": true,
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/juan267/intro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/juan267/intro/issues"
+  },
+  "homepage": "https://github.com/juan267/intro",
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "webpack": "^1.13.2"
+  }
+}
